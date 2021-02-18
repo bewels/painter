@@ -28,63 +28,19 @@
         ctx.strokeStyle = "#888";
         ctx.stroke();
 
-        const ships = {
-            four: {
-                first: {
-                    '1': [1, 1],
-                    '2': [1, 2],
-                    '3': [1, 3],
-                    '4': [1, 4]
-                }
-            },
-            three: {
-                first: {
-                    '1': [3, 1],
-                    '2': [3, 2],
-                    '3': [3, 3],
-
-                },
-                second: {
-                    '1': [3, 4],
-                    '2': [3, 5],
-                    '3': [3, 6],
-
-                }
-            },
-            two: {
-                first: {
-                    '1': [8, 8],
-                    '2': [8, 9]
-
-                },
-                second: {
-                    '1': [6, 8],
-                    '2': [5, 8]
-                },
-                threed: {
-                    '1': [5, 5],
-                    '2': [5, 6]
-                }
-            }
-        }
-
-
-        const generate = (obj) => {
-            
-        }
 
         canvas.addEventListener('click', (e) => {
-            const rect = canvas.getBoundingClientRect()
+            const rect = canvas.getBoundingClientRect();
 
-            const x = e.clientX - rect.left
-            const y = e.clientY - rect.top
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
 
-            const poinX = Math.ceil(x / 50)
-            const poinY = Math.ceil(y / 50)
+            const poinX = Math.ceil(x / 50);
+            const poinY = Math.ceil(y / 50);
 
             ctx.fillRect((50 * poinX) - 50, (50 * poinY) - 50, 50, 50);
-            ctx.fillStyle = '#000'
-            ctx.fill()
+            ctx.fillStyle = '#000';
+            ctx.fill();
         })
     </script>
 </body>
